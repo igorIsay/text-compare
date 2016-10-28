@@ -1,0 +1,11 @@
+.added {
+	color: limegreen;
+}
+
+.deleted {
+	color: red;
+}
+
+.changed {
+	color: darkorange;
+}

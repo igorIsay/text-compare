@@ -9,7 +9,11 @@ class Text
         if (is_array($text)) {
             $this->text = $text;
         } else {
-            $this->text = explode('.', $text);
+            $output = preg_split("/(!|\.|\?) /", $text, -1, PREG_SPLIT_DELIM_CAPTURE);
+            $this->text = [];
+            for ($i = 0; $i < count($output); $i+=2) {
+                $this->text[] = $output[$i] . $output[$i+1];
+            }
             $this->text = array_filter($this->text, function ($element) {
                 return !empty($element);
             });

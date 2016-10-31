@@ -2,7 +2,7 @@ $( document ).ready(function() {
 
 	var compiled = _.template(
 		'<% _.each(sentences, function(sentence, index, list) { %>' +
-		'	<span class="<%= sentence[1] %>" data-old="<%= sentence[2] %>" data-new="<%= sentence[0] %>"><%= sentence[0] %>.</span>' +
+		'	<span class="<%= sentence[1] %>" data-old="<%= sentence[2] %>" data-new="<%= sentence[0] %>"><%= sentence[0] %></span>' +
 		'<% }); %>'
 	);
 
